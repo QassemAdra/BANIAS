@@ -1,0 +1,267 @@
+/* ================================================================
+   QASSEM — Built-in Visual Assets
+   صور وأيقونات جاهزة لكل قسم — مدمجة في القالب
+   ================================================================ */
+
+/* ════════════════════════════════════════
+   HERO — صورة الـ Avatar الشخصية
+   ════════════════════════════════════════ */
+.hero-avatar-wrap {
+  position: relative;
+  width: clamp(260px,28vw,360px);
+  aspect-ratio: 3/4;
+  flex-shrink: 0;
+}
+.hero-avatar-frame {
+  width: 100%; height: 100%;
+  border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
+  overflow: hidden; position: relative;
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.2);
+  box-shadow:
+    0 0 0 1px rgba(var(--brand-rgb,225,29,72),.08),
+    0 30px 80px rgba(0,0,0,.6),
+    inset 0 0 60px rgba(var(--brand-rgb,225,29,72),.06);
+  animation: morphBlob 12s ease-in-out infinite;
+}
+@keyframes morphBlob {
+  0%,100% { border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%; }
+  33%     { border-radius: 55% 45% 40% 60% / 60% 40% 60% 40%; }
+  66%     { border-radius: 45% 55% 60% 40% / 40% 60% 40% 60%; }
+}
+/* Photo réelle de Unsplash (tech/professional) */
+.hero-avatar-photo {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  /* Fallback si pas de photo perso : Unsplash tech professional */
+  background:
+    linear-gradient(160deg, rgba(var(--brand-rgb,225,29,72),.15) 0%, transparent 50%),
+    url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80&fit=crop') center/cover;
+}
+.hero-avatar-glow {
+  position: absolute; inset: -20px; z-index: -1;
+  background: radial-gradient(ellipse, rgba(var(--brand-rgb,225,29,72),.2) 0%, transparent 70%);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+@keyframes glowPulse { 0%,100%{opacity:.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.05)} }
+
+/* Floating badges on avatar */
+.hero-badge {
+  position: absolute;
+  background: rgba(8,8,14,.92); backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.1); border-radius: 12px;
+  padding: 7px 12px; font-size: 9px; font-weight: 900;
+  letter-spacing: .1em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+  animation: floatBadge 6s ease-in-out infinite;
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+}
+.hero-badge-1 { top: 15%; right: -15%; animation-delay: 0s; }
+.hero-badge-2 { bottom: 25%; left: -18%; animation-delay: 2s; }
+.hero-badge-3 { bottom: 10%; right: -12%; animation-delay: 4s; }
+.hero-badge i { color: var(--brand,#e11d48); font-size: 13px; }
+@keyframes floatBadge { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* ════════════════════════════════════════
+   CERTIFICATIONS — شهادات بصرية
+   ════════════════════════════════════════ */
+.cert-card-visual {
+  aspect-ratio: 16/9; border-radius: 14px; overflow: hidden;
+  position: relative; flex-shrink: 0;
+  background: rgba(10,10,18,.9);
+}
+/* Unsplash background per cert category */
+.cert-card-visual.aws {
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=70&fit=crop');
+  background-size: cover;
+}
+.cert-card-visual.microsoft {
+  background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=70&fit=crop');
+  background-size: cover;
+}
+.cert-card-visual.google {
+  background-image: url('https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&q=70&fit=crop');
+  background-size: cover;
+}
+.cert-card-visual.cisco {
+  background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=70&fit=crop');
+  background-size: cover;
+}
+.cert-card-visual.security {
+  background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=70&fit=crop');
+  background-size: cover;
+}
+.cert-card-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.3) 100%);
+  z-index: 1;
+}
+.cert-card-visual::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--brand,#e11d48), var(--gold,#d4af37));
+  z-index: 2;
+}
+.cert-visual-content {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 6px; padding: 12px;
+}
+.cert-visual-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(var(--brand-rgb,225,29,72),.2);
+  border: 2px solid rgba(var(--brand-rgb,225,29,72),.4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--brand,#e11d48);
+}
+.cert-visual-org {
+  font-size: 8px; font-weight: 900; letter-spacing: .2em;
+  text-transform: uppercase; color: rgba(255,255,255,.6);
+}
+.cert-visual-stars { color: var(--gold,#d4af37); font-size: 9px; letter-spacing: 2px; }
+
+/* ════════════════════════════════════════
+   PORTFOLIO — مشاريع بصرية
+   ════════════════════════════════════════ */
+.project-card-img {
+  width: 100%; aspect-ratio: 16/9;
+  border-radius: 14px 14px 0 0; overflow: hidden;
+  position: relative;
+}
+.project-card-img.cloud {
+  background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img.cyber {
+  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img.data {
+  background: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img.network {
+  background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img.devops {
+  background: url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img.ai {
+  background: url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=70&fit=crop') center/cover;
+}
+.project-card-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.75) 100%);
+}
+.project-card-tag {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 8px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px;
+  background: rgba(var(--brand-rgb,225,29,72),.15);
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.3);
+  color: var(--brand,#e11d48); backdrop-filter: blur(8px);
+}
+
+/* ════════════════════════════════════════
+   ABOUT — صورة احترافية
+   ════════════════════════════════════════ */
+.about-photo-wrap {
+  position: relative; border-radius: 20px; overflow: hidden;
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.15);
+  box-shadow: 0 30px 80px rgba(0,0,0,.5);
+}
+.about-photo {
+  width: 100%; aspect-ratio: 4/5; object-fit: cover;
+  background:
+    linear-gradient(180deg, transparent 60%, rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80&fit=crop') center/cover;
+  display: block;
+}
+.about-photo-badge {
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  background: rgba(8,8,14,.9); backdrop-filter: blur(20px);
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.25);
+  border-radius: 99px; padding: 8px 18px;
+  font-size: 9px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase;
+  color: rgba(255,255,255,.8);
+  display: flex; align-items: center; gap: 7px;
+}
+.about-photo-badge i { color: var(--brand,#e11d48); }
+
+/* ════════════════════════════════════════
+   HERITAGE — Timeline visuals
+   ════════════════════════════════════════ */
+.timeline-dot-wrap {
+  width: 50px; height: 50px; flex-shrink: 0;
+  border-radius: 50%; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.timeline-dot-wrap::before {
+  content: '';
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.2);
+}
+.timeline-dot-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--brand-rgb,225,29,72),.25), rgba(0,0,0,.5));
+  border: 2px solid rgba(var(--brand-rgb,225,29,72),.4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--brand,#e11d48);
+  box-shadow: 0 0 20px rgba(var(--brand-rgb,225,29,72),.15);
+}
+
+/* ════════════════════════════════════════
+   CONTACT — Section background
+   ════════════════════════════════════════ */
+.contact-bg-visual {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&q=60&fit=crop') center/cover;
+  opacity: .04;
+}
+
+/* ════════════════════════════════════════
+   SKILLS — Icon bubbles
+   ════════════════════════════════════════ */
+.skill-icon-bubble {
+  width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; position: relative;
+  background: rgba(var(--brand-rgb,225,29,72),.08);
+  border: 1px solid rgba(var(--brand-rgb,225,29,72),.15);
+  transition: all .3s;
+}
+.skill-icon-bubble:hover {
+  background: rgba(var(--brand-rgb,225,29,72),.15);
+  border-color: rgba(var(--brand-rgb,225,29,72),.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(var(--brand-rgb,225,29,72),.2);
+}
+
+/* ════════════════════════════════════════
+   DECORATIVE — Section numbers background
+   ════════════════════════════════════════ */
+.section-deco-num {
+  position: absolute; top: -2rem; right: 0;
+  font-size: clamp(5rem,12vw,10rem);
+  font-weight: 900; color: rgba(255,255,255,.018);
+  pointer-events: none; user-select: none; line-height: 1;
+  font-family: 'Cinzel','Bebas Neue',serif;
+}
+
+/* ════════════════════════════════════════
+   STATS COUNTER CARDS
+   ════════════════════════════════════════ */
+.stat-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06); border-radius: 16px;
+  padding: 20px 16px; text-align: center; position: relative; overflow: hidden;
+  transition: all .3s;
+}
+.stat-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand,#e11d48), transparent);
+}
+.stat-card:hover { background: rgba(var(--brand-rgb,225,29,72),.05); border-color: rgba(var(--brand-rgb,225,29,72),.2); transform: translateY(-4px); }
+.stat-num { font-size: clamp(2rem,4vw,3.5rem); font-weight: 900; color: var(--brand,#e11d48); line-height: 1; }
+.stat-label { font-size: 9px; font-weight: 900; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: 5px; }

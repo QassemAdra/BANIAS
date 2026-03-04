@@ -1,0 +1,93 @@
+/* ================================================================
+   QASSEM ULTIMATE — Typography per Skin
+   ================================================================ */
+
+/* AVADA — Montserrat + Open Sans */
+html[data-skin="avada"] .title-font,
+html[data-skin="avada"] .main-title,
+html[data-skin="avada"] .section-title,
+html[data-skin="avada"] h1, html[data-skin="avada"] h2 {
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: -.02em !important;
+}
+html[data-skin="avada"] body,
+html[data-skin="avada"] p, html[data-skin="avada"] span,
+html[data-skin="avada"] a, html[data-skin="avada"] button {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* DIVI — Playfair Display + DM Sans */
+html[data-skin="divi"] .title-font,
+html[data-skin="divi"] .main-title,
+html[data-skin="divi"] .section-title,
+html[data-skin="divi"] h1, html[data-skin="divi"] h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
+html[data-skin="divi"] body,
+html[data-skin="divi"] p, html[data-skin="divi"] span {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ASTRA — Inter everywhere */
+html[data-skin="astra"] .title-font,
+html[data-skin="astra"] .main-title,
+html[data-skin="astra"] .section-title,
+html[data-skin="astra"] h1, html[data-skin="astra"] h2,
+html[data-skin="astra"] body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* NEWSPAPER — Bebas Neue headers + Roboto body */
+html[data-skin="newspaper"] .title-font,
+html[data-skin="newspaper"] .main-title,
+html[data-skin="newspaper"] .section-title,
+html[data-skin="newspaper"] h1, html[data-skin="newspaper"] h2,
+html[data-skin="newspaper"] h3 {
+  font-family: 'Bebas Neue', 'Impact', sans-serif !important;
+  font-style: normal !important;
+  letter-spacing: .06em !important;
+  font-weight: 400 !important;
+}
+html[data-skin="newspaper"] body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* FLATSOME — Josefin Sans + Nunito */
+html[data-skin="flatsome"] .title-font,
+html[data-skin="flatsome"] .main-title,
+html[data-skin="flatsome"] .section-title,
+html[data-skin="flatsome"] h1, html[data-skin="flatsome"] h2 {
+  font-family: 'Josefin Sans', sans-serif !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+}
+html[data-skin="flatsome"] body {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+/* JANNAH — Tajawal everywhere (Arabic-optimized) */
+html[data-skin="jannah"] .title-font,
+html[data-skin="jannah"] .main-title,
+html[data-skin="jannah"] .section-title,
+html[data-skin="jannah"] h1, html[data-skin="jannah"] h2,
+html[data-skin="jannah"] body, html[data-skin="jannah"] p,
+html[data-skin="jannah"] span, html[data-skin="jannah"] a {
+  font-family: 'Tajawal', 'Cairo', sans-serif !important;
+}
+html[data-skin="jannah"] .title-font,
+html[data-skin="jannah"] h1, html[data-skin="jannah"] h2 {
+  font-weight: 800 !important;
+}
+
+/* GENERATEPRESS — System UI only, zero font loading */
+html[data-skin="generatepress"] .title-font,
+html[data-skin="generatepress"] .main-title,
+html[data-skin="generatepress"] h1, html[data-skin="generatepress"] h2 {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-style: normal !important;
+}
+html[data-skin="generatepress"] body,
+html[data-skin="generatepress"] p,
+html[data-skin="generatepress"] span {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}

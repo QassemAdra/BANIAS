@@ -1,0 +1,368 @@
+/* ================================================================
+   QASSEM ULTIMATE — 7 SKINS MASTER CSS
+   كل skin يُفعَّل عبر: html[data-skin="NAME"]
+   ================================================================ */
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 1 — AVADA (Corporate Fusion)
+   Blueprint: Professional blue, sharp corners, structured layout
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="avada"] {
+  --brand:     #0073aa;
+  --brand-rgb: 0, 115, 170;
+  --gold:      #f0a500;
+  --bg-deep:   #0d1117;
+  --bg-deeper: #080c10;
+}
+
+/* Avada — Top accent bar */
+html[data-skin="avada"] body::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0073aa 0%, #005177 50%, #0073aa 100%);
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 10001;
+}
+html[data-skin="avada"] #navbar { top: 4px; }
+
+/* Avada — Colors */
+html[data-skin="avada"] .glow-blob         { background: radial-gradient(circle, rgba(0,115,170,.38), transparent 70%) !important; }
+html[data-skin="avada"] .glow-blob.gold    { background: radial-gradient(circle, rgba(240,165,0,.22), transparent 70%) !important; }
+html[data-skin="avada"] .stage-aurora      { background: radial-gradient(ellipse, rgba(0,115,170,.2), rgba(0,81,119,.1), transparent) !important; }
+html[data-skin="avada"] .stage-spotlight   { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,115,170,.15), transparent) !important; }
+
+/* Avada — Sharp corners */
+html[data-skin="avada"] .premium-card,
+html[data-skin="avada"] #mobile-menu,
+html[data-skin="avada"] .result-pill       { border-radius: 4px !important; }
+html[data-skin="avada"] .btn-world,
+html[data-skin="avada"] .btn-ghost         { border-radius: 4px !important; }
+html[data-skin="avada"] .social-icon       { border-radius: 6px !important; }
+html[data-skin="avada"] #mobile-tabbar     { border-radius: 0 !important; }
+
+/* Avada — Navbar */
+html[data-skin="avada"] nav.scrolled {
+  background: rgba(8,12,16,.97) !important;
+  border-bottom: 2px solid #0073aa !important;
+  box-shadow: 0 4px 20px rgba(0,115,170,.2) !important;
+}
+
+/* Avada — Buttons */
+html[data-skin="avada"] .btn-world         { background: #0073aa !important; box-shadow: 0 6px 20px rgba(0,115,170,.4) !important; }
+html[data-skin="avada"] .btn-world:hover   { background: #005177 !important; }
+html[data-skin="avada"] #loader-bar        { background: #0073aa !important; box-shadow: 0 0 15px #0073aa !important; }
+html[data-skin="avada"] #loader-status     { color: #0073aa !important; }
+html[data-skin="avada"] .text-rose-500,
+html[data-skin="avada"] .text-rose-600     { color: #0073aa !important; }
+html[data-skin="avada"] .bg-rose-600       { background-color: #0073aa !important; }
+html[data-skin="avada"] .animate-ping      { background: #0073aa !important; }
+html[data-skin="avada"] #reading-progress  { background: linear-gradient(90deg, #0073aa, #f0a500) !important; }
+html[data-skin="avada"] #mobile-tabbar .tab-item.active { color: #0073aa !important; }
+html[data-skin="avada"] #mobile-tabbar .tab-item.active::before { background: #0073aa !important; }
+html[data-skin="avada"] #back-to-top       { background: #0073aa !important; box-shadow: 0 8px 25px rgba(0,115,170,.4) !important; }
+html[data-skin="avada"] #float-btn         { background: #0073aa !important; box-shadow: 0 8px 30px rgba(0,115,170,.45) !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 2 — DIVI (Elegant Creative)
+   Blueprint: Purple-violet, rounded curves, gradient accents
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="divi"] {
+  --brand:     #7c3aed;
+  --brand-rgb: 124, 58, 237;
+  --gold:      #f59e0b;
+  --bg-deep:   #0f0a1e;
+  --bg-deeper: #07040f;
+}
+
+html[data-skin="divi"] .glow-blob         { background: radial-gradient(circle, rgba(124,58,237,.42), transparent 70%) !important; }
+html[data-skin="divi"] .glow-blob.gold    { background: radial-gradient(circle, rgba(245,158,11,.28), transparent 70%) !important; }
+html[data-skin="divi"] .stage-aurora      { background: radial-gradient(ellipse, rgba(124,58,237,.28), rgba(109,40,217,.15), transparent) !important; }
+html[data-skin="divi"] .stage-spotlight   { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(124,58,237,.2), transparent) !important; }
+
+/* Divi — Large curves */
+html[data-skin="divi"] .premium-card      { border-radius: 20px !important; }
+html[data-skin="divi"] .btn-world,
+html[data-skin="divi"] .btn-ghost         { border-radius: 50px !important; }
+html[data-skin="divi"] #mobile-menu       { border-radius: 0 !important; }
+html[data-skin="divi"] .social-icon       { border-radius: 50% !important; }
+
+/* Divi — Gradient accent */
+html[data-skin="divi"] .btn-world         { background: linear-gradient(135deg,#7c3aed,#6d28d9) !important; box-shadow: 0 8px 25px rgba(124,58,237,.45) !important; }
+html[data-skin="divi"] .btn-world:hover   { background: linear-gradient(135deg,#6d28d9,#5b21b6) !important; }
+html[data-skin="divi"] .section-title     { font-style: italic !important; }
+html[data-skin="divi"] nav.scrolled       { background: rgba(7,4,15,.97) !important; border-bottom: 1px solid rgba(124,58,237,.3) !important; box-shadow: 0 8px 30px rgba(124,58,237,.15) !important; }
+
+html[data-skin="divi"] .text-rose-500,
+html[data-skin="divi"] .text-rose-600     { color: #7c3aed !important; }
+html[data-skin="divi"] .bg-rose-600       { background-color: #7c3aed !important; }
+html[data-skin="divi"] .animate-ping      { background: #7c3aed !important; }
+html[data-skin="divi"] #loader-bar        { background: #7c3aed !important; box-shadow: 0 0 15px #7c3aed !important; }
+html[data-skin="divi"] #loader-status     { color: #a78bfa !important; }
+html[data-skin="divi"] #reading-progress  { background: linear-gradient(90deg,#7c3aed,#f59e0b) !important; }
+html[data-skin="divi"] #mobile-tabbar .tab-item.active { color: #7c3aed !important; }
+html[data-skin="divi"] #mobile-tabbar .tab-item.active::before { background: #7c3aed !important; }
+html[data-skin="divi"] #back-to-top       { background: #7c3aed !important; box-shadow: 0 8px 25px rgba(124,58,237,.4) !important; }
+html[data-skin="divi"] #float-btn         { background: #7c3aed !important; box-shadow: 0 8px 30px rgba(124,58,237,.45) !important; }
+html[data-skin="divi"] .premium-card      { border-color: rgba(124,58,237,.15) !important; }
+html[data-skin="divi"] .premium-card:hover { box-shadow: 0 20px 60px rgba(124,58,237,.25) !important; border-color: rgba(124,58,237,.4) !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 3 — ASTRA (Ultra Minimal)
+   Blueprint: Zero decoration, pure typography, flat UI
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="astra"] {
+  --brand:     #e11d48;
+  --brand-rgb: 225, 29, 72;
+  --gold:      #d4af37;
+  --bg-deep:   #0a0a0a;
+  --bg-deeper: #050505;
+}
+
+/* Astra — Remove ALL decorative layers */
+html[data-skin="astra"] #stage-backdrop      { display: none !important; }
+html[data-skin="astra"] .glow-blob           { display: none !important; }
+html[data-skin="astra"] body::after          { display: none !important; }
+html[data-skin="astra"] #canvas-neural       { opacity: .02 !important; }
+
+/* Astra — Flat cards */
+html[data-skin="astra"] .premium-card {
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.055) !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+}
+html[data-skin="astra"] .premium-card:hover  { box-shadow: none !important; border-color: rgba(225,29,72,.3) !important; transform: translateY(-2px) !important; }
+html[data-skin="astra"] .btn-world           { box-shadow: none !important; border-radius: 6px !important; }
+html[data-skin="astra"] .btn-ghost           { box-shadow: none !important; border-radius: 6px !important; }
+
+/* Astra — Minimal navbar */
+html[data-skin="astra"] nav.scrolled {
+  background: rgba(10,10,10,.98) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(255,255,255,.04) !important;
+}
+html[data-skin="astra"] .section-title       { font-weight: 300 !important; letter-spacing: .08em !important; }
+html[data-skin="astra"] h1, html[data-skin="astra"] h2 { font-weight: 300 !important; }
+html[data-skin="astra"] #mobile-tabbar       { box-shadow: none !important; }
+html[data-skin="astra"] #reading-progress    { box-shadow: none !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 4 — NEWSPAPER (Magazine Bold)
+   Blueprint: Red/black, Bebas Neue, ticker bar, editorial cards
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="newspaper"] {
+  --brand:     #e11d48;
+  --brand-rgb: 225, 29, 72;
+  --gold:      #ffd700;
+  --bg-deep:   #080002;
+  --bg-deeper: #040001;
+}
+
+/* Newspaper — Ticker bar */
+html[data-skin="newspaper"] body::before {
+  content: '⚡ QASSEM ADRA — Architecte SI & Cyber Stratège ⚡ Résilience Numérique ⚡ Cloud Architecture ⚡ Enterprise Governance ⚡';
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  background: #e11d48;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  text-align: center;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 10001;
+  overflow: hidden;
+}
+html[data-skin="newspaper"] #navbar         { top: 26px; }
+html[data-skin="newspaper"] .glow-blob      { background: radial-gradient(circle, rgba(225,29,72,.5), transparent 70%) !important; }
+html[data-skin="newspaper"] .stage-aurora   { background: radial-gradient(ellipse, rgba(225,29,72,.22), transparent) !important; }
+
+/* Newspaper — Zero border-radius */
+html[data-skin="newspaper"] .premium-card {
+  border-radius: 0 !important;
+  border-left: 3px solid #e11d48 !important;
+  background: rgba(12,2,2,.88) !important;
+}
+html[data-skin="newspaper"] .btn-world,
+html[data-skin="newspaper"] .btn-ghost      { border-radius: 0 !important; text-transform: uppercase; letter-spacing: .12em; }
+html[data-skin="newspaper"] #mobile-tabbar  { border-radius: 0 !important; border-top: 3px solid #e11d48 !important; }
+html[data-skin="newspaper"] .social-icon    { border-radius: 2px !important; }
+html[data-skin="newspaper"] nav.scrolled    { background: rgba(8,0,2,.98) !important; border-bottom: 3px solid #e11d48 !important; }
+
+/* Newspaper — Bold overrides */
+html[data-skin="newspaper"] .section-title  { font-weight: 900 !important; letter-spacing: .06em !important; text-transform: uppercase !important; font-style: normal !important; }
+html[data-skin="newspaper"] #reading-progress { background: #e11d48 !important; box-shadow: 0 0 10px #e11d48 !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 5 — FLATSOME (Clean Commerce)
+   Blueprint: Teal, clean product cards, section dividers
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="flatsome"] {
+  --brand:     #00a8a8;
+  --brand-rgb: 0, 168, 168;
+  --gold:      #f97316;
+  --bg-deep:   #080f18;
+  --bg-deeper: #040810;
+}
+
+html[data-skin="flatsome"] .glow-blob        { background: radial-gradient(circle, rgba(0,168,168,.32), transparent 70%) !important; }
+html[data-skin="flatsome"] .glow-blob.gold   { background: radial-gradient(circle, rgba(249,115,22,.22), transparent 70%) !important; }
+html[data-skin="flatsome"] .stage-aurora     { background: radial-gradient(ellipse, rgba(0,168,168,.2), transparent) !important; }
+html[data-skin="flatsome"] .stage-spotlight  { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,168,168,.12), transparent) !important; }
+
+html[data-skin="flatsome"] .premium-card {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0,168,168,.15) !important;
+  background: rgba(0,168,168,.04) !important;
+}
+html[data-skin="flatsome"] .premium-card:hover { border-color: rgba(0,168,168,.5) !important; box-shadow: 0 16px 48px rgba(0,168,168,.18) !important; }
+html[data-skin="flatsome"] .btn-world        { background: #00a8a8 !important; box-shadow: 0 6px 20px rgba(0,168,168,.4) !important; border-radius: 8px !important; }
+html[data-skin="flatsome"] .btn-world:hover  { background: #007f7f !important; }
+html[data-skin="flatsome"] .btn-ghost        { border-radius: 8px !important; border-color: rgba(0,168,168,.35) !important; }
+html[data-skin="flatsome"] nav.scrolled      { border-bottom: 1px solid rgba(0,168,168,.25) !important; }
+
+html[data-skin="flatsome"] .text-rose-500,
+html[data-skin="flatsome"] .text-rose-600    { color: #00a8a8 !important; }
+html[data-skin="flatsome"] .bg-rose-600      { background-color: #00a8a8 !important; }
+html[data-skin="flatsome"] .animate-ping     { background: #00a8a8 !important; }
+html[data-skin="flatsome"] #loader-bar       { background: #00a8a8 !important; box-shadow: 0 0 15px #00a8a8 !important; }
+html[data-skin="flatsome"] #loader-status    { color: #00a8a8 !important; }
+html[data-skin="flatsome"] #reading-progress { background: linear-gradient(90deg, #00a8a8, #f97316) !important; }
+html[data-skin="flatsome"] #mobile-tabbar .tab-item.active { color: #00a8a8 !important; }
+html[data-skin="flatsome"] #mobile-tabbar .tab-item.active::before { background: #00a8a8 !important; }
+html[data-skin="flatsome"] #back-to-top      { background: #00a8a8 !important; box-shadow: 0 8px 25px rgba(0,168,168,.4) !important; }
+html[data-skin="flatsome"] #float-btn        { background: #00a8a8 !important; box-shadow: 0 8px 30px rgba(0,168,168,.45) !important; }
+
+/* Flatsome — Section dividers */
+html[data-skin="flatsome"] section > div::after {
+  content: ''; display: block; clear: both;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 6 — JANNAH (العربي الفاخر)
+   Blueprint: Emerald + gold, RTL-first, ornamental borders
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="jannah"] {
+  --brand:     #10b981;
+  --brand-rgb: 16, 185, 129;
+  --gold:      #d4af37;
+  --bg-deep:   #04100a;
+  --bg-deeper: #020806;
+}
+
+html[data-skin="jannah"] .glow-blob          { background: radial-gradient(circle, rgba(16,185,129,.38), transparent 70%) !important; }
+html[data-skin="jannah"] .glow-blob.gold     { background: radial-gradient(circle, rgba(212,175,55,.4), transparent 70%) !important; }
+html[data-skin="jannah"] .stage-aurora       { background: radial-gradient(ellipse, rgba(16,185,129,.25), rgba(5,150,105,.12), transparent) !important; }
+html[data-skin="jannah"] .stage-spotlight    { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(16,185,129,.15), transparent) !important; }
+
+/* Jannah — Rich ornamental cards */
+html[data-skin="jannah"] .premium-card {
+  border-radius: 16px !important;
+  background: linear-gradient(145deg, rgba(16,185,129,.07), rgba(0,0,0,.65)) !important;
+  border: 1px solid rgba(212,175,55,.2) !important;
+}
+html[data-skin="jannah"] .premium-card:hover {
+  border-color: rgba(212,175,55,.55) !important;
+  box-shadow: 0 16px 48px rgba(16,185,129,.2), 0 0 0 1px rgba(212,175,55,.12) !important;
+}
+
+/* Jannah — Gold dividers between sections */
+html[data-skin="jannah"] section {
+  position: relative;
+}
+html[data-skin="jannah"] section::before {
+  content: '';
+  display: block;
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 0 auto 3rem;
+}
+
+html[data-skin="jannah"] .btn-world          { background: linear-gradient(135deg, #10b981, #059669) !important; box-shadow: 0 8px 25px rgba(16,185,129,.42) !important; border-radius: 12px !important; }
+html[data-skin="jannah"] .btn-ghost          { border-color: rgba(212,175,55,.35) !important; border-radius: 12px !important; }
+html[data-skin="jannah"] .btn-ghost:hover    { border-color: rgba(16,185,129,.6) !important; }
+html[data-skin="jannah"] nav.scrolled        { background: rgba(4,16,10,.97) !important; border-bottom: 1px solid rgba(212,175,55,.2) !important; }
+
+html[data-skin="jannah"] .text-rose-500,
+html[data-skin="jannah"] .text-rose-600      { color: #10b981 !important; }
+html[data-skin="jannah"] .bg-rose-600        { background-color: #10b981 !important; }
+html[data-skin="jannah"] .animate-ping       { background: #10b981 !important; }
+html[data-skin="jannah"] #loader-bar         { background: linear-gradient(90deg, #10b981, #d4af37) !important; box-shadow: 0 0 15px #10b981 !important; }
+html[data-skin="jannah"] #loader-status      { color: #10b981 !important; }
+html[data-skin="jannah"] #reading-progress   { background: linear-gradient(90deg, #10b981, #d4af37) !important; }
+html[data-skin="jannah"] #mobile-tabbar .tab-item.active { color: #10b981 !important; }
+html[data-skin="jannah"] #mobile-tabbar .tab-item.active::before { background: #10b981 !important; }
+html[data-skin="jannah"] #back-to-top        { background: #10b981 !important; box-shadow: 0 8px 25px rgba(16,185,129,.42) !important; }
+html[data-skin="jannah"] #float-btn          { background: #10b981 !important; box-shadow: 0 8px 30px rgba(16,185,129,.45) !important; }
+html[data-skin="jannah"] #mobile-tabbar      { border-top: 1px solid rgba(212,175,55,.2) !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   SKIN 7 — GENERATEPRESS (Speed First)
+   Blueprint: Blue, no fx, system fonts, zero overhead
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="generatepress"] {
+  --brand:     #1e40af;
+  --brand-rgb: 30, 64, 175;
+  --gold:      #d4af37;
+  --bg-deep:   #06060e;
+  --bg-deeper: #030308;
+}
+
+/* GeneratePress — Remove ALL heavy effects */
+html[data-skin="generatepress"] #stage-backdrop     { display: none !important; }
+html[data-skin="generatepress"] .glow-blob          { display: none !important; }
+html[data-skin="generatepress"] body::after         { display: none !important; }
+html[data-skin="generatepress"] #canvas-neural      { display: none !important; }
+
+/* GeneratePress — Flat minimal */
+html[data-skin="generatepress"] .premium-card {
+  border-radius: 4px !important;
+  background: rgba(255,255,255,.025) !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255,255,255,.05) !important;
+}
+html[data-skin="generatepress"] .premium-card:hover  { box-shadow: none !important; border-color: rgba(30,64,175,.4) !important; transform: none !important; }
+html[data-skin="generatepress"] .btn-world           { border-radius: 4px !important; background: #1e40af !important; box-shadow: none !important; }
+html[data-skin="generatepress"] .btn-world:hover     { background: #1d4ed8 !important; }
+html[data-skin="generatepress"] .btn-ghost           { border-radius: 4px !important; box-shadow: none !important; }
+html[data-skin="generatepress"] nav.scrolled         { box-shadow: none !important; border-bottom: 1px solid rgba(255,255,255,.05) !important; }
+html[data-skin="generatepress"] #mobile-tabbar       { box-shadow: none !important; border-top: 1px solid rgba(255,255,255,.05) !important; border-radius: 0 !important; }
+html[data-skin="generatepress"] #reading-progress    { box-shadow: none !important; background: #1e40af !important; }
+
+html[data-skin="generatepress"] .text-rose-500,
+html[data-skin="generatepress"] .text-rose-600       { color: #3b82f6 !important; }
+html[data-skin="generatepress"] .bg-rose-600         { background-color: #1e40af !important; }
+html[data-skin="generatepress"] .animate-ping        { background: #1e40af !important; }
+html[data-skin="generatepress"] #loader-bar          { background: #1e40af !important; box-shadow: none !important; }
+html[data-skin="generatepress"] #loader-status       { color: #3b82f6 !important; }
+html[data-skin="generatepress"] #mobile-tabbar .tab-item.active { color: #3b82f6 !important; }
+html[data-skin="generatepress"] #mobile-tabbar .tab-item.active::before { background: #1e40af !important; }
+html[data-skin="generatepress"] #back-to-top         { background: #1e40af !important; box-shadow: none !important; }
+html[data-skin="generatepress"] #float-btn           { background: #1e40af !important; box-shadow: none !important; }
+html[data-skin="generatepress"] .section-title       { font-weight: 400 !important; }
+
+
+/* ════════════════════════════════════════════════════════════════
+   DEFAULT (QASSEM Original)
+   ════════════════════════════════════════════════════════════════ */
+html[data-skin="qassem"],
+html:not([data-skin]),
+html[data-skin=""] {
+  --brand:     #e11d48;
+  --brand-rgb: 225, 29, 72;
+  --gold:      #d4af37;
+  --bg-deep:   #09090c;
+  --bg-deeper: #050507;
+}
