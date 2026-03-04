@@ -1,0 +1,26 @@
+name: Qassem Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config user.name "qassem-bot"
+          git config user.email "qassem-bot@users.noreply.github.com"
+
+      - name: Bot heartbeat
+        run: |
+          echo "Bot ran at $(date)" >> BOT_LOG.txt
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "chore: qassem-bot automated update" || echo "No changes"
+          git push
